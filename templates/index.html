@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>FormCheck</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>FormCheck</h1>
+
+        <p>
+            Generador automático de casos de prueba
+        </p>
+
+    </header>
+
+    <section class="stats">
+
+        <div class="card">
+            <h2>Total</h2>
+            <span id="total">0</span>
+        </div>
+
+        <div class="card">
+            <h2>Válidos</h2>
+            <span id="validos">0</span>
+        </div>
+
+        <div class="card">
+            <h2>Inválidos</h2>
+            <span id="invalidos">0</span>
+        </div>
+
+    </section>
+
+    <div class="center">
+
+        <button id="generar">
+            Generar Casos
+        </button>
+
+    </div>
+
+    <table id="tabla">
+
+        <thead>
+
+            <tr>
+                <th>Edad</th>
+                <th>País</th>
+                <th>Usuario</th>
+                <th>Pago</th>
+                <th>Consentimiento</th>
+                <th>Estado</th>
+            </tr>
+
+        </thead>
+
+        <tbody></tbody>
+
+    </table>
+
+    <div id="detalle">
+
+        Selecciona un caso inválido para ver detalles.
+
+    </div>
+
+    <script
+        src="{{ url_for('static', filename='main.js') }}"
+    ></script>
+
+</body>
+
+</html>
